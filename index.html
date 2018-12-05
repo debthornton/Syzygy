@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Syzygy</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+    <div class="title">Syzygy</div>
+
+    <iframe id="sc-widget" width="200px" height="20px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/699697&color=%23508585&auto_play=false&hide_related=false&buying=false&show_artwork=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true"></iframe>
+
+    <div id="song-name"></div>
+
+    <div class="main">
+        <div class="clock">
+            <span id="hour"></span>
+            <span id="minute"></span>
+            <span id="second"></span>
+            <span id="am-pm"></span>
+        </div>
+        <div class="todo-bar">
+            <div id="add-todo">
+                <form id="add-todo-form" action="#/" novalidate>  
+                    <button onclick="handlers.addTodo()">
+                        <i class="fa fa-plus-square-o"></i>
+                    </button>
+                    <input id="add-todo-text-input" name= "add-todo-text-input" type="text" required>
+                    <label for="add-todo-text-input" id="todo-label">
+                        Type note above
+                    </label>
+                </form>              
+            </div>
+            
+            <div id="toggle-all">
+                <button onclick="handlers.toggleAll()">Toggle All </button>
+            </div>
+        </div>
+    </div>
+      
+    <div class="todo-list">
+        <ul id="ul" class="hidden">
+        </ul>
+    </div>
+    
+    
+
+    <div id="audio-controls">
+        <div id="previous-button" class="previous"></div>
+        <div class="toggle-play play" id="toggle-play"></div>
+        <div id="next-button" class="next"></div>
+        <div class="slide-container">
+            <input id="volume" type="range" min="0" max="100" value="50" class="slider" id="my-range">
+            <div id="volume-icon" class="volume-icon med"></div>
+            <p id="volume-number">50</p>
+        </div>
+    </div>
+
+    <footer>
+        <span id="debdevelops-link">Developed by
+            <a href="https://www.debdevelops.com" target="_blank">Deb Thornton</a>
+            <a id="github-link" href="https://github.com/debxdev" target="_blank"><i class="fa fa-github" style="font-size:30px"></i></a>
+        </span>
+
+        <div class="credit">Icons made by
+            <a href="https://www.flaticon.com/authors/daniel-bruce" title="Daniel Bruce" target="_blank">Daniel Bruce</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+        </div>
+    </footer>
+
+    <div id="backgrounds">
+        <img class="background-img img-1 opaque" src="css/media/background-imgs/background-img-1.jpg" alt="Ocean Waves">
+        <img class="background-img img-2 " src="css/media/background-imgs/background-img-2.jpg" alt="Forest Ambience">
+        <img class="background-img img-3" src="css/media/background-imgs/background-img-3.jpg" alt="Rain Ambience">
+        <img class="background-img img-4" src="css/media/background-imgs/background-img-4.jpg" alt="Thunderstorm By The Sea">
+        <img class="background-img img-5" src="css/media/background-imgs/background-img-5.jpg" alt="Thunderstorm">
+        <img class="background-img img-6" src="css/media/background-imgs/background-img-6.jpg" alt="Zen Garden">
+        <img class="background-img img-7" src="css/media/background-imgs/background-img-7.jpg" alt="Dream Surf">
+        <img class="background-img img-8" src="css/media/background-imgs/background-img-8.jpg" alt="Crackling Fire">
+        <img class="background-img img-9" src="css/media/background-imgs/background-img-9.jpg" alt="Crackling Fire & Rain">
+        <img class="background-img img-10" src="css/media/background-imgs/background-img-10.jpg" alt="Waterfall">
+        <img class="background-img img-11" src="css/media/background-imgs/background-img-11.jpg" alt="Dreamy Rain">
+        <img class="background-img img-12" src="css/media/background-imgs/background-img-12.jpg" alt="Winter Solitude">
+        <img class="background-img img-13" src="css/media/background-imgs/background-img-13.jpg" alt="A Rainy Day in the Country">
+        <img class="background-img img-14" src="css/media/background-imgs/background-img-14.jpg" alt="Sleepy Babbling Brook">
+        <img class="background-img img-15" src="css/media/background-imgs/background-img-15.jpg" alt="Song of the Whales">
+        <img class="background-img img-16" src="css/media/background-imgs/background-img-16.jpg" alt="Natural Sounds of Thunderstorm">
+    </div>
+
+    <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+</body>
+
+</html>
