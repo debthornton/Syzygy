@@ -95,6 +95,8 @@ var handlers = {
             addTodoForm.setAttribute("novalidate", "");
 
             view.displayTodos();
+            
+            return false;
         }
     },
     deleteTodo: function (position) {
