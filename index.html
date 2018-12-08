@@ -51,7 +51,7 @@
         <div class="toggle-play play" id="toggle-play"></div>
         <div id="next-button" class="next"></div>
         <div class="slide-container">
-            <input id="volume" type="range" min="0" max="100" value="50" class="slider">
+            <input oninput="widget.setVolume(this.value)" id="volume" type="range" min="0" max="100" value="50" class="slider">
             <div id="volume-icon" class="volume-icon med"></div>
             <p id="volume-number">50</p>
         </div>
