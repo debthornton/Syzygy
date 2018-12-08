@@ -24,8 +24,9 @@
         </div>
         <div class="todo-bar">
             <div id="add-todo">
-                <form id="add-todo-form" action="#/" novalidate>  
-                    <input class = "add-todo-button" type="button" value = "&#xf0fe;" onclick="handlers.addTodo()">
+                <form id="add-todo-form" action="#/" onsubmit="return handlers.addTodo()" novalidate>  
+                    <button type="button" onclick="handlers.addTodo()"> <i class="fa fa-plus-square-o"></i>
+                    </button>
                     <input id="add-todo-text-input" name= "add-todo-text-input" type="text" required>
                     <label for="add-todo-text-input" id="todo-label">
                         Type note above
