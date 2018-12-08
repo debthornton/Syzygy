@@ -200,6 +200,8 @@ var view = {
 
         });
         
+        var todoForm = document.getElementById("add-todo-form");
+        
         todoForm.onsubmit = function(e) {
             
         handlers.addTodo();
