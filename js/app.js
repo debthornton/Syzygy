@@ -95,8 +95,6 @@ var handlers = {
             addTodoForm.setAttribute("novalidate", "");
 
             view.displayTodos();
-            
-            return false;
         }
     },
     deleteTodo: function (position) {
@@ -201,6 +199,14 @@ var view = {
             }
 
         });
+        
+        todoForm.onsubmit = function(e) {
+            
+        handlers.addTodo();
+            
+          e.preventDefault();
+          return false;
+        }; 
     }
 };
 
