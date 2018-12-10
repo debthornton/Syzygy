@@ -291,6 +291,7 @@ button:focus {
     width: 35px;
     height: 35px;
     cursor: pointer;
+    overflow: visible;
 }
 
 .fa-plus-square-o {
