@@ -285,7 +285,7 @@ button:focus {
     font-size: 2em;
     font-family: "FontAwesome";
     padding: 0 10px 5px 2px;
-    margin-right: 2px;
+    margin-right: 20px;
     text-shadow: 1px 1px 8px black;
     text-align: center;
     width: 35px;
