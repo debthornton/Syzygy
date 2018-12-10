@@ -14,8 +14,18 @@
     <iframe id="sc-widget" width="200px" height="20px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/699697&color=%23508585&auto_play=false&hide_related=false&buying=false&show_artwork=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true"></iframe>
 
     <div id="song-name"></div>
-
+      
     <div class="main">
+        <div id="audio-controls">
+            <div id="previous-button" class="previous"></div>
+            <div class="toggle-play play" id="toggle-play"></div>
+            <div id="next-button" class="next"></div>
+            <div class="slide-container">
+                <input oninput="widget.setVolume(this.value)" id="volume" type="range" min="0" max="100" value="50" class=" custom">
+                <div id="volume-icon" class="volume-icon med"></div>
+                <p id="volume-number">50</p>
+            </div>
+        </div>
         <div class="clock">
             <span id="hour"></span>
             <span id="minute"></span>
@@ -24,45 +34,32 @@
         </div>
         <div class="todo-bar">
             <div id="add-todo">
-                <form id="add-todo-form" action="#/" novalidate>  
-                    <button type="button" onclick="handlers.addTodo()"> <i class="fa fa-plus-square-o"></i>
+                <form id="add-todo-form" action="#/" novalidate>
+                    <button type="button" onclick="handlers.addTodo()"><i class="fa fa-plus-square-o"></i>
                     </button>
-                    <input id="add-todo-text-input" name= "add-todo-text-input" type="text" required>
+                    <input id="add-todo-text-input" name="add-todo-text-input" type="text" required>
                     <label for="add-todo-text-input" id="todo-label">
                         Type note above
                     </label>
-                </form>              
+                </form>
             </div>
-            
+
             <div id="toggle-all">
                 <button onclick="handlers.toggleAll()">Toggle All </button>
             </div>
         </div>
     </div>
-      
+
     <div class="todo-list">
         <ul id="ul" class="hidden">
         </ul>
     </div>
-    
-    
-
-    <div id="audio-controls">
-        <div id="previous-button" class="previous"></div>
-        <div class="toggle-play play" id="toggle-play"></div>
-        <div id="next-button" class="next"></div>
-        <div class="slide-container">
-            <input oninput="widget.setVolume(this.value)" id="volume" type="range" min="0" max="100" value="50" class="slider">
-            <div id="volume-icon" class="volume-icon med"></div>
-            <p id="volume-number">50</p>
-        </div>
-    </div>
 
     <footer>
-        <span id="debdevelops-link">Developed by
+        <div id="debdevelops-link">Developed by
             <a href="https://www.debdevelops.com" target="_blank">Deb Thornton</a>
             <a id="github-link" href="https://github.com/debxdev" target="_blank"><i class="fa fa-github" style="font-size:30px"></i></a>
-        </span>
+        </div>
 
         <div class="credit">Icons made by
             <a href="https://www.flaticon.com/authors/daniel-bruce" title="Daniel Bruce" target="_blank">Daniel Bruce</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
