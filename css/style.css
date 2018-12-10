@@ -661,10 +661,13 @@ i {
     #add-todo button {
         margin: 0;
         width: 15%;
+        height: 100px;
+        overflow: visible;
     }
     
     .fa-plus-square-o {
         font-size: 3em;
+        overflow: visible;
     }
 
     input[type=text] {
