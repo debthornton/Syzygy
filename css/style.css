@@ -285,6 +285,11 @@ button:focus {
     cursor: pointer;
 }
 
+.fa-plus-square-o {
+    font-size: 3em;
+    overflow: visible;
+}
+
 input[type=text] {
     background-color: transparent;
     border: none;
