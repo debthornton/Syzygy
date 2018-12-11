@@ -830,7 +830,7 @@ i {
 
     @keyframes move-up {
         0% {
-            top: -80px
+            top: -80px;
         }
 
         25% {
@@ -842,7 +842,7 @@ i {
         }
 
         75% {
-            top: -250px
+            top: -250px;
         }
 
         100% {
@@ -852,7 +852,7 @@ i {
     
     @-webkit-keyframes move-up {
         0% {
-            top: -80px
+            top: -80px;
         }
 
         25% {
@@ -864,7 +864,7 @@ i {
         }
 
         75% {
-            top: -250px
+            top: -250px;
         }
 
         100% {
