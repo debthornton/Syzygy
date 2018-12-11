@@ -75,7 +75,7 @@ iframe {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 750px;
+    width: 100%;
     font-weight: 100;
     -webkit-filter: drop-shadow(1px 1px 1px #222);
     filter: drop-shadow(1px 1px 1px #222);
@@ -209,7 +209,7 @@ iframe {
 }
 
 .main {
-    width: 800px;
+    width: 900px;
     margin: 10px auto 10px auto;
     padding: 30px 30px 10px 30px;
     display: flex;
@@ -228,19 +228,20 @@ iframe {
     justify-content: center;
     align-items: center;
     text-shadow: 2px 4px 25px rgba(0, 0, 0, 0.9);
-    margin: 50px auto 80px auto;
+    width: 100%;
 }
 
 #am-pm {
     font-size: 40px;
-    padding-top: 25px;
+    font-weight: 200;
+    padding-top: 20px;
     margin-right: 30px;
 }
 
 #hour,
 #minute,
 #second {
-    width: 178px;
+    width: 250px;
     text-align: center;
 }
 
@@ -250,6 +251,7 @@ iframe {
 
 #second {
     text-align: left;
+    200px;
 }
 
 .todo-bar {
@@ -264,6 +266,14 @@ iframe {
 
 #add-todo {
     width: 100%;
+}
+
+#add-todo-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 button {
@@ -285,13 +295,13 @@ button:focus {
     font-size: 2em;
     font-family: "FontAwesome";
     padding: 0 10px 5px 2px;
-    margin-right: 20px;
     text-shadow: 1px 1px 8px black;
     text-align: center;
-    width: 35px;
+    width: 55px;
     height: 35px;
     cursor: pointer;
     overflow: visible;
+    align-self: flex-start;
 }
 
 .fa-plus-square-o {
@@ -305,7 +315,7 @@ input[type=text] {
     border-bottom: 2px solid white;
     border-bottom-style: inset;
     color: white;
-    width: 90%;
+    width: 93%;
     vertical-align: middle;
     font-size: 1.3em;
     font-weight: 300;
@@ -321,10 +331,11 @@ input[type=text]:focus {
 
 #todo-label {
     font-size: 1em;
-    margin-left: 40px;
+    margin-left: 55px;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 2px 5px;
     border-radius: 6px;
+    width: 16%;
 }
 
 #toggle-all {
@@ -354,7 +365,8 @@ input[type=text]:focus {
 }
 
 #toggle-all button:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-shadow: 2px 2px 8px gray;
     color: black;
 }
 
@@ -365,29 +377,73 @@ toggle-all button:focus {
 
 .todo-list {
     width: 600px;
-    margin: 20px auto;
+    margin: 10px auto 40px auto;
 }
 
 ul {
     width: 100%;
-    height: 400px;
+    height: 0;
     padding: 2px 16px 2px 8px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
-    animation: fade-in 0.3s ease-in forwards;
+}
+
+.fade-in-ul {
+    animation: fade-in 0.1s linear forwards;
+}
+
+.fade-out-ul {
+    animation: fade-out 0.07s linear forwards;
 }
 
 @keyframes fade-in {
     0% {
         opacity: 0;
+        height: 80px;
     }
+
+    25% {
+        height: 150px;
+    }
+
+    50% {
+        opacity: 50%;
+        height: 200px;
+    }
+
+    75% {
+        height: 300px;
+    }
+
+    100% {
+        opacity: 100%;
+        height: 400px;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 0;
+        height: 100px;
+    }
+
+    25% {
+        height: 300px;
+    }
+
     50% {
         opacity: 50%;
     }
+
+    75% {
+        display: none;
+    }
+
     100% {
-        opacity: 100%
+        background-color: transparent;
     }
 }
 
@@ -507,7 +563,7 @@ i {
     display: none;
 }
 
-@media (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
 
     #backgrounds {
         min-width: 100%;
@@ -649,6 +705,12 @@ i {
         text-shadow: 2px 2px 1px black;
     }
 
+    #song-name {
+        width: 75%;
+        font-size: 2.5em;
+        margin-top: 15px;
+    }
+
     .main {
         height: 100%;
         margin: 100px 0 0 0;
@@ -658,33 +720,73 @@ i {
     }
 
     .clock {
-        width: 100%;
+        width: 90%;
         font-size: 130px;
         align-self: center;
         justify-content: center;
         text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.9);
         font-weight: 300;
-        margin: 0;
+        position: relative;
     }
 
     #hour,
     #minute,
     #second {
-        width: 360px;
+        width: 30%;
+        text-align: center;
     }
 
     #hour {
-        margin-left: 0;
+        width: 22%;
+        text-align: justify;
+    }
+
+    #minute {
+        width: 35%;
+    }
+
+    #second {
+        text-align: left;
     }
 
     #am-pm {
         font-size: 70px;
         padding-top: 25px;
-        margin: 0;
+        margin-left: 10px;
+        width: 10%;
     }
 
     .todo-bar {
         width: 100%;
+        margin-bottom: 0;
+        height: 170px;
+        position: relative;
+    }
+
+    .higher {
+        animation: move-up 0.05s linear forwards;
+    }
+
+    @keyframes move-up {
+        0% {
+            top: -80px
+        }
+
+        25% {
+            top: -150px;
+        }
+
+        50% {
+            top: -200px;
+        }
+
+        75% {
+            top: -250px
+        }
+
+        100% {
+            top: -380px;
+        }
     }
 
     #add-todo {
@@ -725,6 +827,7 @@ i {
     #todo-label {
         margin-left: 137px;
         font-size: 1.2em;
+        width: 17%;
     }
 
     #toggle-all {
@@ -747,11 +850,11 @@ i {
 
     .todo-list {
         width: 90%;
-        margin: 0 auto 40px auto;
+        margin: 0 auto;
     }
 
     ul {
-        height: 250px;
+        margin-top: -380px;
         width: 100%;
     }
 
@@ -760,13 +863,11 @@ i {
         font-size: 35px;
     }
 
-
     li input[type=text] {
         height: 65px;
         width: 70%;
         margin-right: 30px;
     }
-
 
     li span {
         width: 7%;
@@ -788,9 +889,9 @@ i {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        font-size: 2.3em;
+        font-size: 2em;
         margin-bottom: 0;
-        margin-top: 10px;
+        margin-top: 5px;
         position: relative;
         bottom: 0;
         width: 100%;
@@ -801,10 +902,136 @@ i {
     .credit {
         width: 100%;
         text-align: center;
-        margin: 5px 0;
+        margin: 2px 0;
     }
 
     .credit {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
+}
+
+
+@media only screen and (max-height: 770px) {
+
+    html,
+    body {
+        overflow-y: visible;
+        height: auto;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #backgrounds {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: 100%;
+        overflow-x: visible;
+        position: fixed;
+    }
+
+    .background-img {
+        width: auto;
+        height: 150%;
+        overflow-x: visible;
+        margin-bottom: 0;
+        left: 0%;
+        top: -50%;
+        position: fixed;
+    }
+
+    #song-name {
+        width: 80%;
+        font-size: 1.12em;
+    }
+
+    .title {
+        font-size: 1.9em;
+        margin-right: 0;
+    }
+
+    #audio-controls {
+        width: 650px;
+        margin: -60px auto 90px auto;
+    }
+
+    .previous,
+    .play,
+    .toggle-play,
+    .pause,
+    .next {
+        width: 25px;
+        height: 25px;
+    }
+
+    .clock {
+        width: 80%;
+        font-size: 75px;
+        margin-bottom: 25px;
+    }
+
+    #hour,
+    #minute,
+    #second {
+        width: 30%;
+        text-align: center;
+    }
+
+    #hour {
+        width: 15%;
+        text-align: justify;
+    }
+
+    #minute {
+        width: 30%;
+    }
+
+    #second {
+        text-align: left;
+    }
+
+    #am-pm {
+        font-size: 75px;
+        padding-top: 5px;
+    }
+
+    .fa-plus-square-o {
+        font-size: 2em;
+    }
+
+    #toggle-all {
+        font-size: 1.6em;
+    }
+
+    #toggle-all button {
+        height: 35px;
+    }
+
+    #add-todo-form input[type=text] {
+        width: 90%;
+        align-self: flex-end;
+    }
+
+    .higher {
+        animation: none;
+    }
+
+    ul {
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    footer {
+        font-size: 1.8em;
+        margin-bottom: 0;
+        margin-top: 5px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
 }
