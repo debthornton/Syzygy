@@ -504,58 +504,6 @@ ul {
     }
 }
 
-.higher {
-        animation: move-up 0.05s linear forwards;
-        -webkit-animation-name: move-up;
-        -webkit-animation-duration: 0.05s;
-        -webkit-animation-direction: forwards;
-        -webkit-animation-timing-function: linear;
-    }
-
-@keyframes move-up {
-       0% {
-           top: -80px;
-       }
-
-       25% {
-           top: -150px;
-       }
-
-       50% {
-           top: -200px;
-       }
-
-       75% {
-           top: -250px;
-       }
-
-       100% {
-           top: -380px;
-       }
-}
-
-    @-webkit-keyframes move-up {
-        0% {
-            top: -80px;
-        }
-
-        25% {
-            top: -150px;
-        }
-
-        50% {
-            top: -200px;
-        }
-
-        75% {
-            top: -250px;
-        }
-
-        100% {
-            top: -380px;
-        }
-    }
-
 ul::-webkit-scrollbar {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0);
@@ -872,6 +820,57 @@ i {
         position: relative;
     }
 
+    .higher {
+        animation: move-up 0.05s linear forwards;
+        -webkit-animation-name: move-up;
+        -webkit-animation-duration: 0.05s;
+        -webkit-animation-direction: forwards;
+        -webkit-animation-timing-function: linear;
+    }
+
+    @keyframes move-up {
+        0% {
+            top: -80px;
+        }
+
+        25% {
+            top: -150px;
+        }
+
+        50% {
+            top: -200px;
+        }
+
+        75% {
+            top: -250px;
+        }
+
+        100% {
+            top: -380px;
+        }
+    }
+    
+    @-webkit-keyframes move-up {
+        0% {
+            top: -80px;
+        }
+
+        25% {
+            top: -150px;
+        }
+
+        50% {
+            top: -200px;
+        }
+
+        75% {
+            top: -250px;
+        }
+
+        100% {
+            top: -380px;
+        }
+    }
 
     #add-todo {
         width: 100%;
