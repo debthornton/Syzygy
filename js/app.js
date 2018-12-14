@@ -95,6 +95,8 @@ var handlers = {
             addTodoForm.setAttribute("novalidate", "");
 
             view.displayTodos();
+            
+        
         }
     },
     deleteTodo: function (position) {
@@ -121,11 +123,16 @@ var view = {
     displayTodos: function () {
         var todosUl = document.querySelector("ul");
         todosUl.innerHTML = "";
+        var list = document.getElementById("todo-bar-id");
 
         if (todoList.todos.length > 0) {
-            todosUl.classList.remove("hidden");
+            list.classList.add("higher");
+            todosUl.classList.remove("hidden", "fade-out-ul"); 
+            todosUl.classList.add("fade-in-ul");
         } else {
-            todosUl.classList.add("hidden");
+            list.classList.remove("higher");
+            todosUl.classList.remove("fade-in-ul");
+            todosUl.classList.add("fade-out-ul");
         }
 
         todoList.todos.forEach(function (todo, position) {
@@ -176,7 +183,6 @@ var view = {
 
         todosUl.addEventListener("click", function (event) {
 
-
             var elementClicked = event.target;
 
             if (elementClicked.className === "delete-button fa fa-trash-o") {
@@ -196,18 +202,18 @@ var view = {
                     todoList.changeTodo(index, todoInput.value);
                 });
 
-            }
+            }              
 
         });
         
         var todoForm = document.getElementById("add-todo-form");
-        
+            
         todoForm.onsubmit = function(e) {
             
-        handlers.addTodo();
+            handlers.addTodo();
             
-          e.preventDefault();
-          return false;
+            e.preventDefault();
+            return false;
         }; 
     }
 };
@@ -289,7 +295,7 @@ view.setUpEventListeners();
         }
 
     });
-
+    
     document.getElementById("volume").addEventListener("touchmove", function () {
         var volumeNum = document.getElementById("volume-number");
         var volumeIcon = document.getElementById("volume-icon");
@@ -475,3 +481,8 @@ view.setUpEventListeners();
     });
 
 }());
+
+
+
+
+
