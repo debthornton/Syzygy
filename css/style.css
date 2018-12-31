@@ -47,13 +47,14 @@ body {
     -moz-transition: opacity 1s ease-out;
     -o-transition: opacity 1s ease-out;
     transition: opacity 1s ease-out;
-    opacity: 0;
     overflow: hidden;
 }
 
+/*
 .background-img.opaque {
     opacity: 1;
 }
+*/
 
 .img-1 {
     background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg");
