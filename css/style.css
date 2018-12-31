@@ -65,15 +65,16 @@ iframe {
 }
 
 #audio-controls {
-    margin: 23px auto 0 auto;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 59%;
+    width: 100%;
     font-weight: 100;
     -webkit-filter: drop-shadow(1px 1px 1px #222);
     filter: drop-shadow(1px 1px 1px #222);
+    
 }
 
 .previous {
@@ -225,7 +226,6 @@ iframe {
     text-shadow: 2px 4px 25px rgba(0, 0, 0, 0.9);
     width: 100%;
     min-height: 20%;
-    margin-top: 30%;
     z-index: -99;
 }
 
