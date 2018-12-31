@@ -330,67 +330,67 @@ view.setUpEventListeners();
             var backgroundImg = document.getElementById("backgrounds");
             switch (currentSound.title) {
                 case "Forest Ambience":
-                    backgroundImg.getElementsByTagName('img')[1].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[2].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[1].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[2].classList.remove("opaque");
                     break;
                 case "Rain Ambience":
-                    backgroundImg.getElementsByTagName('img')[2].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[3].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[2].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[3].classList.remove("opaque");
                     break;
                 case "Thunderstorm By The Sea (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[3].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[4].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[3].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[4].classList.remove("opaque");
                     break;
                 case "Thunderstorm (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[4].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[5].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[4].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[5].classList.remove("opaque");
                     break;
                 case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-                    backgroundImg.getElementsByTagName('img')[5].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[6].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[5].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[6].classList.remove("opaque");
                     break;
                 case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[6].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[7].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[6].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[7].classList.remove("opaque");
                     break;
                 case "Crackling Fire (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[7].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[8].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[7].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[8].classList.remove("opaque");
                     break;
                 case "Crackling Fire & Rain":
-                    backgroundImg.getElementsByTagName('img')[8].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[9].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[8].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[9].classList.remove("opaque");
                     break;
                 case "Waterfall":
-                    backgroundImg.getElementsByTagName('img')[9].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[10].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[9].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[10].classList.remove("opaque");
                     break;
                 case "Delta Sleep System: Dreamy Rain":
-                    backgroundImg.getElementsByTagName('img')[10].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[11].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[10].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[11].classList.remove("opaque");
                     break;
                 case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-                    backgroundImg.getElementsByTagName('img')[11].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[12].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[11].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[12].classList.remove("opaque");
                     break;
                 case "A Rainy Day in the Country":
-                    backgroundImg.getElementsByTagName('img')[12].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[13].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[12].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[13].classList.remove("opaque");
                     break;
                 case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-                    backgroundImg.getElementsByTagName('img')[13].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[14].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[13].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[14].classList.remove("opaque");
                     break;
                 case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-                    backgroundImg.getElementsByTagName('img')[14].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[15].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[14].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[15].classList.remove("opaque");
                     break;
                 case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-                    backgroundImg.getElementsByTagName('img')[15].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[15].className += " opaque";
                     break;
                 default:
-                    backgroundImg.getElementsByTagName('img')[0].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[1].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[0].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[1].classList.remove("opaque");
             };
         });
     });
@@ -414,67 +414,67 @@ view.setUpEventListeners();
             var backgroundImg = document.getElementById("backgrounds");
             switch (currentSound.title) {
                 case "Forest Ambience":
-                    backgroundImg.getElementsByTagName('img')[1].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[0].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[1].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[0].classList.remove("opaque");
                     break;
                 case "Rain Ambience":
-                    backgroundImg.getElementsByTagName('img')[2].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[1].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[2].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[1].classList.remove("opaque");
                     break;
                 case "Thunderstorm By The Sea (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[3].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[2].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[3].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[2].classList.remove("opaque");
                     break;
                 case "Thunderstorm (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[4].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[3].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[4].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[3].classList.remove("opaque");
                     break;
                 case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-                    backgroundImg.getElementsByTagName('img')[5].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[4].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[5].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[4].classList.remove("opaque");
                     break;
                 case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[6].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[5].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[6].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[5].classList.remove("opaque");
                     break;
                 case "Crackling Fire (Sounds of Nature)":
-                    backgroundImg.getElementsByTagName('img')[7].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[6].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[7].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[6].classList.remove("opaque");
                     break;
                 case "Crackling Fire & Rain":
-                    backgroundImg.getElementsByTagName('img')[8].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[7].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[8].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[7].classList.remove("opaque");
                     break;
                 case "Waterfall":
-                    backgroundImg.getElementsByTagName('img')[9].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[8].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[9].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[8].classList.remove("opaque");
                     break;
                 case "Delta Sleep System: Dreamy Rain":
-                    backgroundImg.getElementsByTagName('img')[10].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[9].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[10].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[9].classList.remove("opaque");
                     break;
                 case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-                    backgroundImg.getElementsByTagName('img')[11].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[10].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[11].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[10].classList.remove("opaque");
                     break;
                 case "A Rainy Day in the Country":
-                    backgroundImg.getElementsByTagName('img')[12].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[11].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[12].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[11].classList.remove("opaque");
                     break;
                 case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-                    backgroundImg.getElementsByTagName('img')[13].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[12].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[13].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[12].classList.remove("opaque");
                     break;
                 case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-                    backgroundImg.getElementsByTagName('img')[14].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[13].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[14].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[13].classList.remove("opaque");
                     break;
                 case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-                    backgroundImg.getElementsByTagName('img')[15].className += " opaque";
-                    backgroundImg.getElementsByTagName('img')[14].classList.remove("opaque");
+                    backgroundImg.getElementsByTagName('div')[15].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[14].classList.remove("opaque");
                     break;
                 default:
-                    backgroundImg.getElementsByTagName('img')[0].className += " opaque";
+                    backgroundImg.getElementsByTagName('div')[0].className += " opaque";
             };
         });
 
