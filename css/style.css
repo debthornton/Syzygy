@@ -225,7 +225,7 @@ iframe {
     align-items: center;
     text-shadow: 2px 4px 25px rgba(0, 0, 0, 0.9);
     width: 100%;
-    z-index: -99;
+    z-index: 1;
 }
 
 #am-pm {
