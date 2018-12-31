@@ -55,6 +55,56 @@ body {
     opacity: 1;
 }
 
+.img-1 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg");
+}
+.img-2 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472230/background-img-2.jpg");
+}
+.img-3 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg");
+}
+.img-4 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg");
+}
+.img-5 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg");
+}
+.img-6 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg");
+}
+.img-7 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg");
+}
+.img-8 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg");
+}
+.img-9 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg");
+}
+.img-10 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg");
+}
+.img-11 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg");
+}
+.img-12 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg");
+}
+.img-13 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg");
+}
+.img-14 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg");
+}
+.img-15 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg");
+}
+.img-16 {
+    background-image: url("https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg");
+}
+
+
 iframe {
     opacity: 0;
     position: absolute;
