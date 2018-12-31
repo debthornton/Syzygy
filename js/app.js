@@ -394,48 +394,48 @@ view.setUpEventListeners();
                     
                 case "Forest Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472230/background-img-2.jpg";
                 break;
-                case "Rain Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg"
+                case "Rain Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg";
                 break;
                 case "Thunderstorm By The Sea (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg";
                 break;
                 case "Thunderstorm (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg";
                 break;
                 case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg";
                 break;
                 case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg";
                 break;
                 case "Crackling Fire (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg";
                 break;
                 case "Crackling Fire & Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg";
                 break;
                 case "Waterfall":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg";
                 break;
                 case "Delta Sleep System: Dreamy Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg";
                 break;
                 case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg";
                 break;
                 case "A Rainy Day in the Country":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg";
                 break;
                 case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg";
                 break;
                 case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg";
                 break;
                 case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg";
                 break;
-                default: backgroundImg.src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg"
+                default: backgroundImg.src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg";
             }
         });
     });
@@ -524,48 +524,48 @@ view.setUpEventListeners();
                     
                 case "Forest Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472230/background-img-2.jpg";
                 break;
-                case "Rain Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg"
+                case "Rain Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg";
                 break;
                 case "Thunderstorm By The Sea (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg";
                 break;
                 case "Thunderstorm (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg";
                 break;
                 case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg";
                 break;
                 case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg";
                 break;
                 case "Crackling Fire (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg";
                 break;
                 case "Crackling Fire & Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg";
                 break;
                 case "Waterfall":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg";
                 break;
                 case "Delta Sleep System: Dreamy Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg";
                 break;
                 case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg";
                 break;
                 case "A Rainy Day in the Country":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg";
                 break;
                 case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg";
                 break;
                 case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg";
                 break;
                 case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg"
+                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg";
                 break;
-                default: backgroundImg.src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg"
+                default: backgroundImg.src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg";
             }
         });
 
