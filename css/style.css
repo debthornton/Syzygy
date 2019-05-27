@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Orbitron|Yellowtail|Bungee");
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300|Raleway:100,500|Bungee");
 
 * {
     margin: 0;
@@ -13,9 +13,8 @@ html {
 }
 
 body {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    font-family: sans-serif;
+    overflow: hidden;
+    font-family: "Lato", sans-serif;
     padding: 15px 0 0 0;
     position: relative;
     color: white;
@@ -25,20 +24,106 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-#backgrounds {
+#slide-image-container {
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    margin: 0;
+}
+
+.slide-image::after {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: inset 0 0 150px black;
+}
+
+#slide-image-container .slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    opacity: 0;
+}
+
+#slide-image-container .slide.active {
+    transition: opacity 1s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    opacity: 1;
+}
+
+#slide-image-container .slide-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    position: absolute;
+    /* transform: scale(1.2); */
+    background-position: center;
+}
+
+.active .slide-image {
+    /* transition: transform 20s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+    transform: scale(1); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    position: absolute;
+    background-position: center;
+    filter: contrast(105%) brightness(120%) grayscale(25%); 
+}
+
+.slide.becoming-inactive {
+    width: 100%;
+    animation: slide-out 3s forwards ease-in 3s;
+    z-index: 3;
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        
+    }
+    100% {
+        opacity: 0;        
+    }
+}
+
+.z-index {
+    z-index: 4;
+}
+
+.inactive {
+    opacity: 0;
+}
+
+/* #backgrounds {
     min-width: 100%;
     min-height: 100%;
-    width: auto;
+    width: 100%;
     height: 100%;
     position: absolute;
-    top: -0;
+    top: 0;
     z-index: -100;
     overflow: hidden;
-}
+} */
 
-.background-img {
+
+/* .background-img {
     width: 2500px;
     height: auto;
     margin-bottom: 0;
@@ -49,11 +134,13 @@ body {
     transition: opacity 1s ease-out;
     overflow: hidden;
     top: -15%;
-}
+    filter: contrast(95%) brightness(90%) grayscale(50%);  
+} */
 
 iframe {
     opacity: 0;
     position: absolute;
+    display: none;
 }
 
 .heading {
@@ -61,47 +148,58 @@ iframe {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    height: 20px;
+    align-items: center;
+    height: 65px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15vw;
+    box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.4);
+    z-index: 10;
 }
 
 #song-name {
-    font-weight: 100;
-    font-size: 1.15em;
-    margin: 10px 20px;
-    width: 40%;
+    font-weight: 300;
+    font-size: 1em;
+    margin: 10px 0;
+    opacity: 0.8;
     text-align: right;
 }
 
 .title {
-    margin: -18px 0 0 10px;
-    font-family: "YellowTail", sans-serif;
-    font-weight: lighter;
-    font-size: 3em;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    letter-spacing: 7px;
 }
 
 .main {
-    width: 900px;
-    margin: 10px auto 10px auto;
-    padding: 30px 30px 10px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    height: 100%;
-}
-
-#audio-controls {
-    margin-top: 20px;
+    width: 100%;
+    padding: 75px 16vw 10px 15vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
+    position: relative;
+    height: 100vh;
+    z-index: 10;
+}
+
+#audio-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 300px;
     font-weight: 100;
     -webkit-filter: drop-shadow(1px 1px 1px #222);
     filter: drop-shadow(1px 1px 1px #222);
     z-index: 99;
-    align-self: center;
+    order: 2;
+    height: 30px;
+    opacity: 0.7;
 }
 
 .previous {
@@ -113,6 +211,7 @@ iframe {
     cursor: pointer;
     filter: invert(1);
     align-self: center;
+    opacity: 0.7;
 }
 
 .toggle-play {
@@ -123,6 +222,7 @@ iframe {
     top: 100%;
     filter: invert(1);
     align-self: center;
+    opacity: 0.7;
 }
 
 .play {
@@ -131,6 +231,7 @@ iframe {
     background-image: url(media/play-button.png);
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.7;
 }
 
 .pause {
@@ -139,6 +240,7 @@ iframe {
     background-image: url(media/pause-button.png);
     background-repeat: no-repeat;
     background-size: contain;
+    opacity: 0.7;
 }
 
 .next {
@@ -150,10 +252,11 @@ iframe {
     cursor: pointer;
     filter: invert(1);
     align-self: center;
+    opacity: 0.7;
 }
 
 .slide-container {
-    width: 340px;
+    width: 160px;
     display: flex;
     justify-content: space-between;
     opacity: 0.9;
@@ -167,29 +270,52 @@ iframe {
     width: 80%;
     align-self: center;
     margin-right: 5px;
-    outline: none;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.5);
     opacity: 0.7;
     -webkit-filter: drop-shadow(1px 1px 1px #222);
     filter: drop-shadow(1px 1px 1px #222);
 }
 
 #volume::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    -webkit-appearance: none !important;
     appearance: none;
-    width: 15px;
-    height: 12px;
-    border-radius: 50px;
+    width: 2px;
+    height: 16px;
     opacity: 1;
-    background-color: white;
+    border: 1px solid transparent;
+    background-color: rgba(245, 245, 245, 0.774);
     cursor: pointer;
+
 }
 
 #volume::-moz-range-thumb {
-    width: 15px;
-    height: 12px;
-    background-color: white;
+    width: 2px;
+    height: 16px;
+    border: 0 solid transparent;
+    background-color: rgba(245, 245, 245, 0.774);
     cursor: pointer;
+
+}
+
+input[type=range]::-moz-focus-outer {
+    border: 0;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+#volume::-webkit-slider-runnable-track {
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0.7;
+}
+#volume::-moz-range-track {
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0.7;
+}
+
+#volume::-moz-range-progress {
+    background: rgb(59, 57, 57);
 }
 
 .volume-icon {
@@ -199,8 +325,7 @@ iframe {
     background-repeat: no-repeat;
     background-size: contain;
     filter: invert(1);
-    opacity: 0.9;
-    margin-right: 2px;
+    margin: 0px 2px 0 8px;
     cursor: pointer;
 }
 
@@ -220,43 +345,45 @@ iframe {
 #volume-number {
     align-self: flex-end;
     margin-left: 5px;
+    font-weight: 300;
 }
 
 .clock {
     text-align: center;
-    font-size: 70px;
-    font-family: "Orbitron", sans-serif;
-    font-weight: 400;
+    font-size: 35px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
     display: flex;
-    justify-content: center;
-    align-self: center;
-    text-shadow: 2px 4px 25px rgba(0, 0, 0, 0.9);
-    width: 100%;
+    justify-items: flex-end;
+    align-items: flex-end;
+    width: 200px;
     z-index: 1;
-    margin-left: -120px;
+    order: 1;
+    height: 40px;
+    text-shadow: 2px 2px 8px black;
 }
 
 #am-pm {
-    font-size: 50px;
-    font-weight: 200;
-    padding-top: 10px;
-    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    margin: 3px;
 }
 
 #hour,
 #minute,
 #second {
-    width: 350px;
+    width: 55px;
     text-align: center;
 }
 
 #hour {
     text-align: right;
+    width: 35px;
 }
 
 #second {
     text-align: left;
-    width: 200px;
 }
 
 .todo-bar {
@@ -269,6 +396,8 @@ iframe {
     position: relative;
     z-index: 2;
     align-self: center;
+    order: 3;
+    margin-top: -60vh;
 }
 
 #add-todo {
@@ -300,7 +429,6 @@ button:focus {
     background-color: transparent;
     color: white;
     font-size: 2em;
-    font-family: "FontAwesome";
     padding: 0 10px 5px 2px;
     text-shadow: 1px 1px 8px black;
     text-align: center;
@@ -309,27 +437,27 @@ button:focus {
     cursor: pointer;
     overflow: visible;
     align-self: flex-start;
+    display: none;
 }
 
-.fa-plus-square-o {
-    font-size: 1.3em;
+.fa-plus {
+    font-size: 0.8em;
     overflow: visible;
 }
 
 input[type=text] {
-    background-color: rgba(100, 100, 100, 0);
+    background-color: transparent;
     border: none;
-    border-bottom: 2px solid white;
-    border-bottom-style: inset;
-    color: white;
-    width: 93%;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+    width: 100%;
     vertical-align: middle;
     font-size: 1.3em;
-    font-weight: 300;
-    padding: 5px;
+    font-weight: 100;
+    padding-bottom: 5px;
     margin-bottom: 15px;
     text-shadow: 2px 2px 8px black;
-    box-shadow: 0 4px 2px -2px gray;
 }
 
 input[type=text]:focus {
@@ -338,37 +466,40 @@ input[type=text]:focus {
 
 #todo-label {
     font-size: 1em;
-    margin-left: 55px;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 2px 5px;
-    border-radius: 6px;
-    width: 16%;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.884);
+    text-shadow: 2px 2px 8px black;
+    transition: opacity 0.3s ease;
 }
 
 #toggle-all {
-    width: 150px;
-    height: 35px;
-    position: relative;
-    top: -30px;
-    left: 50%;
-    margin: 5px auto 0 -75px;
+    width: 110px;
+    height: 25px;
+    position: absolute;
+    top: -25px;
+    right: 15vw;
     display: flex;
     flex-direction: row;
     justify-content: center;
     font-size: 1.6em;
-    font-family: sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 #toggle-all button {
     border: none;
     border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color:  rgba(0, 0, 0, 0.5);
     color: white;
-    padding-bottom: 5px;
-    text-shadow: 2px 2px 8px black;
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.6);
     width: 100%;
-    font-size: 1em;
+    font-size: 0.6em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 100;
+    padding-top: 3px;
+    transition: background-color 0.8s ease, color 0.8s ease;
 }
 
 #toggle-all button:hover {
@@ -377,242 +508,219 @@ input[type=text]:focus {
     color: black;
 }
 
-toggle-all button:focus {
+#toggle-all button:focus {
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
 }
 
-.todo-list {
-    width: 600px;
-    margin: 10px auto 40px auto;
-    position: relative;
+#todo-list {
+    width: 100%;
+    position: absolute;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
+    bottom: 45px;
+    z-index: 10;
 }
 
 ul {
     width: 100%;
     height: 0;
-    padding: 2px 16px 2px 8px;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
     overflow-x: hidden;
     overflow-y: scroll;
     position: relative;
+    transition: height 0.3s ease;
 }
 
-.fade-in-ul {
-    animation: fade-in 0.1s linear forwards;
-    -webkit-animation-name: fade-in;
-    -webkit-animation-duration: 0.1s;
-    -webkit-animation-direction: forwards;
-    -webkit-animation-timing-function: linear;
+.visibility ul {
+    height: 35vh;
+    transition: height 0.3s ease;
+    padding: 15px 15vw 10px 15vw;  
+}
+
+.visibility #toggle-all {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.visibility #todo-label {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* .fade-in-ul {
+    animation: fade-in 0.5s ease forwards;
+    -webkit-animation: fade-in 0.5s ease forwards;
 }
 
 .fade-out-ul {
-    animation: fade-out 0.07s linear forwards;
-    -webkit-animation-name: fade-out;
-    -webkit-animation-duration: 0.07s;
-    -webkit-animation-direction: forwards;
-    -webkit-animation-timing-function: linear;
+    animation: fade-out 0.07s ease forwards;
+    -webkit-animation: fade-out 0.07s ease forwards;
 }
 
 @keyframes fade-in {
     0% {
         opacity: 0;
-        height: 80px;
-    }
-
-    25% {
-        height: 150px;
-    }
-
-    50% {
-        opacity: 50%;
-        height: 200px;
-    }
-
-    75% {
-        height: 300px;
     }
 
     100% {
-        opacity: 100%;
-        height: 400px;
+        opacity: 1;
+        height: 35vh;
     }
 }
 
 @-webkit-keyframes fade-in {
     0% {
         opacity: 0;
-        height: 80px;
-    }
-
-    25% {
-        height: 150px;
-    }
-
-    50% {
-        opacity: 50%;
-        height: 200px;
-    }
-
-    75% {
-        height: 300px;
     }
 
     100% {
-        opacity: 100%;
-        height: 400px;
+        opacity: 1;
+        height: 35vh;
     }
 }
 
 @keyframes fade-out {
     0% {
+        opacity: 1;
+        height: 35vh;
+    }
+
+    95% {
         opacity: 0;
-        height: 200px;
-    }
-
-    25% {
-        height: 100px;
-    }
-
-    50% {
-        opacity: 50%;
-    }
-
-    75% {
-        display: none;
+        height: 0;
     }
 
     100% {
-        background-color: transparent;
+        display: none;
     }
 }
 
 @-webkit-keyframes fade-out {
     0% {
+        opacity: 1;
+        height: 35vh;
+    }
+
+    95% {
         opacity: 0;
-        height: 200px;
-    }
-
-    25% {
-        height: 100px;
-    }
-
-    50% {
-        opacity: 50%;
-    }
-
-    75% {
-        display: none;
+        height: 0;
     }
 
     100% {
-        background-color: transparent;
+        display: none;
     }
-}
+} */
 
-ul::-webkit-scrollbar {
+#todo-list::-webkit-scrollbar {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0);
 }
 
-ul::-webkit-scrollbar-corner {
+#todo-list::-webkit-scrollbar-corner {
     border-radius: 10px;
 }
 
-ul::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.6);
+#todo-list::-webkit-scrollbar-thumb {
+    background-color: transparent;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
-    background-color: rgba(168, 172, 181, 0.7);
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: transparent;
     border-radius: 10px;
 }
 
 li {
     list-style-type: none;
     margin: 20px 5px 30px 8px;
-    width: 99%;
-    height: 25px;
+    width: 100%;
+    height: 35px;
     font-size: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     position: relative;
+    transition: opacity 1s ease;
 }
 
 li input[type=text] {
     border-bottom: none;
-    height: 35px;
+    height: 45px;
+    margin-top: 10px;
     width: 75%;
     box-shadow: none;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
 li div {
     width: 25%;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-end;  
 }
 
 .toggle-button {
     background-color: rgba(100, 100, 100, 0);
-    border: 2px solid white;
-    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.747);
+    border-radius: 2px;
     margin-left: 8px;
-    padding: 4px 5px 24px 5px;
+    padding: 4px 5px;
     color: white;
     font-size: 0.85em;
-    height: 100%;
+    height: 35px;
     align-self: center;
+    opacity: 0.55;
+    font-weight: 100;
 }
 
 .delete-button {
     border: none;
     background-color: rgba(100, 100, 100, 0);
     width: 40px;
-    font-size: 1.6em;
-    filter: invert(1);
+    font-size: 1.3em;
     position: relative;
     align-self: center;
+    opacity: 0.35;
+    color:  rgba(255, 255, 255, 0.788);
 }
 
 footer {
     width: 100%;
-    font-weight: lighter;
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-shadow: 2px 2px 8px black;
-    padding: 0 15px 10px 15px;
+    padding: 10px auto;
     position: absolute;
     bottom: 0;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
 }
 
 footer a {
     text-decoration: none;
     color: white;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 #debdevelops-link {
     font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.678);
 }
 
 #github-link {
-    color: white;
-}
-
-.credit {
-    font-size: 0.7em;
+    color: rgba(255, 255, 255, 0.678);
+    font-size: 1.5em;
 }
 
 i {
@@ -846,14 +954,12 @@ i {
         align-self: center;
     }
 
-    .higher {
+    /* .higher {
         animation: move-up 0.05s linear forwards;
-        -webkit-animation-name: move-up;
-        -webkit-animation-duration: 0.05s;
-        -webkit-animation-direction: forwards;
-        -webkit-animation-timing-function: linear;
-    }
-
+        -webkit-animation: move-up 0.05s linear forwards;
+        top: 0;
+    } */
+/* 
     @keyframes move-up {
         0% {
             top: 0px;
@@ -880,7 +986,7 @@ i {
         100% {
             top: -35px;
         }
-    }
+    } */
 
     #add-todo {
         width: 100%;
@@ -939,7 +1045,7 @@ i {
         top: 0;
     }
 
-    .todo-list {
+    #todo-list {
         width: 90%;
         margin: 0 auto;
     }
@@ -1204,7 +1310,7 @@ i {
         height: 70px;
     }
 
-    .higher {
+    /* .higher {
         animation: move-up 0.05s linear forwards;
         -webkit-animation-name: move-up;
         -webkit-animation-duration: 0.05s;
@@ -1230,7 +1336,7 @@ i {
         100% {
             top: -35px;
         }
-    }
+    } */
 
 }
 
@@ -1569,7 +1675,7 @@ i {
         }
     }
 
-    .todo-list {
+    #todo-list {
         width: 745px;
         margin: 10px auto 10px auto;
     }
@@ -1692,7 +1798,7 @@ i {
         height: 650px;
     }
 
-    .todo-list {
+    #todo-list {
         margin-bottom: 0;
     }
 

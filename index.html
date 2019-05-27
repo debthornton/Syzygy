@@ -8,13 +8,27 @@
     <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/debdev/image/upload/v1547929315/Syzygy/favicon.ico">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909236/Syzygy/background-img-1-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909235/Syzygy/background-img-2-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909240/Syzygy/background-img-3-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909236/Syzygy/background-img-4-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909246/Syzygy/background-img-5-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909247/Syzygy/background-img-6-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909245/Syzygy/background-img-7-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909246/Syzygy/background-img-8-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909251/Syzygy/background-img-9-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909234/Syzygy/background-img-10-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909248/Syzygy/background-img-11-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909242/Syzygy/background-img-12-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909250/Syzygy/background-img-13-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909242/Syzygy/background-img-14-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909242/Syzygy/background-img-15-min.jpg" as="image">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558909240/Syzygy/background-img-16-min.jpg" as="image">
+    <link rel="preload" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/699697&color=%23508585&auto_play=false&hide_related=false&buying=false&show_artwork=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true" as="document">
 </head>
 
 <body id="body">
-    
-
     <iframe id="sc-widget" width="200px" height="20px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/699697&color=%23508585&auto_play=false&hide_related=false&buying=false&show_artwork=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true"></iframe>
-    
     
     <div class="heading">
         <div class="title">Syzygy</div>
@@ -26,7 +40,7 @@
             <div class="toggle-play play" id="toggle-play"></div>
             <div id="next-button" class="next"></div>
             <div class="slide-container">
-                <input oninput="widget.setVolume(this.value)" id="volume" type="range" min="0" max="100" value="50" class=" custom">
+                <input oninput="widget.setVolume(this.value)" id="volume" type="range" min="0" max="100" value="50">
                 <div id="volume-icon" class="volume-icon med"></div>
                 <p id="volume-number">50</p>
             </div>
@@ -40,7 +54,7 @@
         <div class="todo-bar" id="todo-bar-id">
             <div id="add-todo">
                 <form id="add-todo-form" action="#/" novalidate>
-                    <button type="button" onclick="handlers.addTodo()"><i class="fa fa-plus-square-o"></i>
+                    <button type="button" onclick="handlers.addTodo()"><i class="fa fa-plus"></i>
                     </button>
                     <input id="add-todo-text-input" name="add-todo-text-input" type="text" required>
                     <label for="add-todo-text-input" id="todo-label">
@@ -49,37 +63,113 @@
                 </form>
             </div>
 
-            <div id="toggle-all">
-                <button onclick="handlers.toggleAll()">Toggle All </button>
-            </div>
+            
         </div>
     </div>
-
-    <div class="todo-list">
-        <ul id="ul" class="hidden fade-out-ul">
+    <div id="todo-list">
+            <div id="toggle-all">
+                    <button onclick="handlers.toggleAll()">Toggle All</button>
+                </div>
+        <ul id="ul">
         </ul>
     </div>
-
     <footer>
         <div id="debdevelops-link">Developed by
-            <a href="https://debxdev.github.io/debdevelops/" target="_blank">Deb Thornton</a>
-            <a id="github-link" href="https://github.com/debxdev" target="_blank"><i class="fa fa-github" style="font-size:30px"></i></a>
-        </div>
-
-        <div class="credit">Icons made by
-            <a href="https://www.flaticon.com/authors/daniel-bruce" title="Daniel Bruce" target="_blank">Daniel Bruce</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+            <a href="https://debthornton.ml/
+            " target="_blank">Deb Thornton</a>
+            <a id="github-link" href="https://github.com/debxdev" target="_blank"><i class="fa fa-github"></i></a>
         </div>
     </footer>
 
-    <div id="backgrounds">
-        <img src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg" id="background-img-id" class="background-img">
+    <div id='slide-image-container' style='transform: translate(0px, 0px, 0px);'>
+        <div class="slide active" id='slide-1' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909236/Syzygy/background-img-1-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-2' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909235/Syzygy/background-img-2-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-3' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909240/Syzygy/background-img-3-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-4' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909236/Syzygy/background-img-4-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-5' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909246/Syzygy/background-img-5-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-6' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909247/Syzygy/background-img-6-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-7' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909245/Syzygy/background-img-7-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-8' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909246/Syzygy/background-img-8-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-9' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909251/Syzygy/background-img-9-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-10' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909234/Syzygy/background-img-10-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-11' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909248/Syzygy/background-img-11-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-12' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909242/Syzygy/background-img-12-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-13' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909250/Syzygy/background-img-13-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-14' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909242/Syzygy/background-img-14-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-15' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909242/Syzygy/background-img-15-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
+        <div class="slide inactive" id='slide-16' style='height: 100%;'>
+            <div class='slide-image'
+                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558909240/Syzygy/background-img-16-min.jpg); min-width: 100%;'>
+            </div>
+        </div>
     </div>
 
     <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/dwyl/range-touch/master/range-touch.min.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/dwyl/range-touch/master/demo/display-range-value.js"></script>
-    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/app.js"></script>
+    <script src="js/slides.js"></script>
 </body>
 
 </html>

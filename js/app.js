@@ -94,9 +94,7 @@ var handlers = {
 
             addTodoForm.setAttribute("novalidate", "");
 
-            view.displayTodos();
-            
-        
+            view.displayTodos();       
         }
     },
     deleteTodo: function (position) {
@@ -123,16 +121,15 @@ var view = {
     displayTodos: function () {
         var todosUl = document.querySelector("ul");
         todosUl.innerHTML = "";
-        var list = document.getElementById("todo-bar-id");
+        var list = document.getElementById("todo-list");
+        var label = document.getElementById('todo-label');
 
         if (todoList.todos.length > 0) {
-            list.classList.add("higher");
-            todosUl.classList.remove("hidden", "fade-out-ul"); 
-            todosUl.classList.add("fade-in-ul");
-        } else {
-            list.classList.remove("higher");
-            todosUl.classList.remove("fade-in-ul");
-            todosUl.classList.add("fade-out-ul");
+            list.classList.add("visibility");
+            label.style.opacity = '0';                
+        } else {          
+            list.classList.remove("visibility");
+            label.style.opacity = '1';               
         }
 
         todoList.todos.forEach(function (todo, position) {
@@ -142,10 +139,8 @@ var view = {
             todoInput.setAttribute("type", "text");
             todoInput.className = "todo-input";
             var todoSpan = document.createElement("span");
-            todoSpan.textContent = "◯\xa0\xa0\xa0";
+            todoSpan.textContent = "";
             var todoTextWithCompletion = "";
-
-
 
             if (todo.completed === true) {
                 todoTextWithCompletion = todo.todoText;
@@ -296,7 +291,7 @@ view.setUpEventListeners();
 
     });
     
-    document.getElementById("volume").addEventListener("touchmove", function () {
+    document.getElementById("volume").addEventListener("touchmove", function() {
         var volumeNum = document.getElementById("volume-number");
         var volumeIcon = document.getElementById("volume-icon");
         volumeNum.textContent = volume.value;
@@ -312,7 +307,7 @@ view.setUpEventListeners();
 
     });
 
-    document.getElementById("previous-button").addEventListener("click", function () {
+    document.getElementById("previous-button").addEventListener("click", function() {
         widget.prev();
         widget.getCurrentSound(function (currentSound) {
             var songName = document.getElementById("song-name");
@@ -325,119 +320,9 @@ view.setUpEventListeners();
                     songName.textContent = "Streaming: " + currentSound.title;
                     togglePlay.className = "toggle-play pause"
                 }
-            });
-
-            var backgroundImg = document.getElementById("background-img-id");
-            switch (currentSound.title) {
-//                case "Forest Ambience":
-//                    backgroundImg.getElementsByTagName('div')[1].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[2].classList.remove("opaque");
-//                    break;
-//                case "Rain Ambience":
-//                    backgroundImg.getElementsByTagName('div')[2].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[3].classList.remove("opaque");
-//                    break;
-//                case "Thunderstorm By The Sea (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[3].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[4].classList.remove("opaque");
-//                    break;
-//                case "Thunderstorm (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[4].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[5].classList.remove("opaque");
-//                    break;
-//                case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-//                    backgroundImg.getElementsByTagName('div')[5].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[6].classList.remove("opaque");
-//                    break;
-//                case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[6].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[7].classList.remove("opaque");
-//                    break;
-//                case "Crackling Fire (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[7].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[8].classList.remove("opaque");
-//                    break;
-//                case "Crackling Fire & Rain":
-//                    backgroundImg.getElementsByTagName('div')[8].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[9].classList.remove("opaque");
-//                    break;
-//                case "Waterfall":
-//                    backgroundImg.getElementsByTagName('div')[9].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[10].classList.remove("opaque");
-//                    break;
-//                case "Delta Sleep System: Dreamy Rain":
-//                    backgroundImg.getElementsByTagName('div')[10].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[11].classList.remove("opaque");
-//                    break;
-//                case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-//                    backgroundImg.getElementsByTagName('div')[11].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[12].classList.remove("opaque");
-//                    break;
-//                case "A Rainy Day in the Country":
-//                    backgroundImg.getElementsByTagName('div')[12].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[13].classList.remove("opaque");
-//                    break;
-//                case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-//                    backgroundImg.getElementsByTagName('div')[13].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[14].classList.remove("opaque");
-//                    break;
-//                case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-//                    backgroundImg.getElementsByTagName('div')[14].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[15].classList.remove("opaque");
-//                    break;
-//                case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-//                    backgroundImg.getElementsByTagName('div')[15].className += " opaque";
-//                    break;
-//                default:
-//                    backgroundImg.getElementsByTagName('div')[0].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[1].classList.remove("opaque");
-                    
-                case "Forest Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472230/background-img-2.jpg";
-                break;
-                case "Rain Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg";
-                break;
-                case "Thunderstorm By The Sea (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg";
-                break;
-                case "Thunderstorm (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg";
-                break;
-                case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg";
-                break;
-                case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg";
-                break;
-                case "Crackling Fire (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg";
-                break;
-                case "Crackling Fire & Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg";
-                break;
-                case "Waterfall":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg";
-                break;
-                case "Delta Sleep System: Dreamy Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg";
-                break;
-                case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg";
-                break;
-                case "A Rainy Day in the Country":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg";
-                break;
-                case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg";
-                break;
-                case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg";
-                break;
-                case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg";
-                break;
-                default: backgroundImg.src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg";
-            }
+            });          
         });
+        backwardSwipe();
     });
 
     document.getElementById("next-button").addEventListener("click", function () {
@@ -455,122 +340,9 @@ view.setUpEventListeners();
                     togglePlay.className = "toggle-play pause"
                 }
             });
-
-            var backgroundImg = document.getElementById("background-img-id");
-            switch (currentSound.title) {
-//                case "Forest Ambience":
-//                    backgroundImg.getElementsByTagName('div')[1].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[0].classList.remove("opaque");
-//                    break;
-//                case "Rain Ambience":
-//                    backgroundImg.getElementsByTagName('div')[2].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[1].classList.remove("opaque");
-//                    break;
-//                case "Thunderstorm By The Sea (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[3].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[2].classList.remove("opaque");
-//                    break;
-//                case "Thunderstorm (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[4].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[3].classList.remove("opaque");
-//                    break;
-//                case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-//                    backgroundImg.getElementsByTagName('div')[5].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[4].classList.remove("opaque");
-//                    break;
-//                case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[6].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[5].classList.remove("opaque");
-//                    break;
-//                case "Crackling Fire (Sounds of Nature)":
-//                    backgroundImg.getElementsByTagName('div')[7].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[6].classList.remove("opaque");
-//                    break;
-//                case "Crackling Fire & Rain":
-//                    backgroundImg.getElementsByTagName('div')[8].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[7].classList.remove("opaque");
-//                    break;
-//                case "Waterfall":
-//                    backgroundImg.getElementsByTagName('div')[9].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[8].classList.remove("opaque");
-//                    break;
-//                case "Delta Sleep System: Dreamy Rain":
-//                    backgroundImg.getElementsByTagName('div')[10].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[9].classList.remove("opaque");
-//                    break;
-//                case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-//                    backgroundImg.getElementsByTagName('div')[11].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[10].classList.remove("opaque");
-//                    break;
-//                case "A Rainy Day in the Country":
-//                    backgroundImg.getElementsByTagName('div')[12].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[11].classList.remove("opaque");
-//                    break;
-//                case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-//                    backgroundImg.getElementsByTagName('div')[13].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[12].classList.remove("opaque");
-//                    break;
-//                case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-//                    backgroundImg.getElementsByTagName('div')[14].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[13].classList.remove("opaque");
-//                    break;
-//                case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-//                    backgroundImg.getElementsByTagName('div')[15].className += " opaque";
-//                    backgroundImg.getElementsByTagName('div')[14].classList.remove("opaque");
-//                    break;
-//                default:
-//                    backgroundImg.getElementsByTagName('div')[0].className += " opaque";
-                    
-                    
-                case "Forest Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472230/background-img-2.jpg";
-                break;
-                case "Rain Ambience": backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-3.jpg";
-                break;
-                case "Thunderstorm By The Sea (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472252/background-img-4.jpg";
-                break;
-                case "Thunderstorm (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472250/background-img-5.jpg";
-                break;
-                case "Zen Garden (Music for Deep Sleep, Meditation, Spa, Healing, Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472248/background-img-6.jpg";
-                break;
-                case "Dream Surf: Ocean Waves for Relaxation (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472243/background-img-7.jpg";
-                break;
-                case "Crackling Fire (Sounds of Nature)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472231/background-img-8.jpg";
-                break;
-                case "Crackling Fire & Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544499757/marko-horvat-220259-unsplash.jpg";
-                break;
-                case "Waterfall":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472232/background-img-10.jpg";
-                break;
-                case "Delta Sleep System: Dreamy Rain":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472261/background-img-11.jpg";
-                break;
-                case "Winter Solitude (Music for Therapy, Deep Sleep, Meditation, Spa, Healing & Relaxation)":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472253/background-img-12.jpg";
-                break;
-                case "A Rainy Day in the Country":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-13.jpg";
-                break;
-                case "Delta Sleep System: Sleepy Babbling Brook With Delta Brainwave Pulses":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472247/background-img-14.jpg";
-                break;
-                case "Song of the Whales: Authentic Nature Sounds for Therapy, Sleep, Meditation, Healing & Relaxation":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472260/background-img-15.jpg";
-                break;
-                case "Authentic Natural Sounds of Thunderstorm With Ambient Music for Therapy & Deep Sleep":
-                backgroundImg.src = "https://res.cloudinary.com/debdev/image/upload/v1544472226/background-img-16.jpg";
-                break;
-                default: backgroundImg.src="https://res.cloudinary.com/debdev/image/upload/v1544472264/background-img-1.jpg";
-            }
         });
-
+        forwardSwipe();
     });
-
 }());
 
 
