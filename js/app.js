@@ -149,17 +149,26 @@ var view = {
                 todoTextWithCompletion = todo.todoText;
             }
 
+            // function store() {
+            //     // window.localStorage.setItem('list', todoList.todos);
+            //     todoList.todos.forEach(function(todo) {
+            //         window.localStorage.setItem('list', todo.todoText);
+            //     });
+            //     console.log(window.localStorage.list);
+            // }
+
             todoLi.id = position;
 
             todoInput.value = todoTextWithCompletion;
 
             todoDiv.appendChild(this.createDeleteButton());
-            todoDiv.appendChild(this.createToggleButton());
+            todoDiv.appendChild(this.createToggleButton());          
             todoLi.appendChild(todoSpan);
             todoLi.appendChild(todoInput);
             todoLi.appendChild(todoDiv);
             todosUl.appendChild(todoLi);
-
+            todosUl.scrollTop = todosUl.scrollHeight;
+            // store();
         }, this)
     },
     createDeleteButton: function () {
@@ -198,15 +207,12 @@ var view = {
                 });
 
             }              
-
         });
         
         var todoForm = document.getElementById("add-todo-form");
-            
-        todoForm.onsubmit = function(e) {
-            
+       
+        todoForm.onsubmit = function(e) {          
             handlers.addTodo();
-            
             e.preventDefault();
             return false;
         }; 
