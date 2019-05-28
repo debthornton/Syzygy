@@ -350,8 +350,3 @@ view.setUpEventListeners();
         forwardSwipe();
     });
 }());
-
-
-
-
-

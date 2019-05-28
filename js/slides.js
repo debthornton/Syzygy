@@ -19,14 +19,14 @@ function Slide(img, index, innerImg) {
             setTimeout(function() {
                 setTimeout(function() {
                     img.classList.remove('active');
-                }, 300);        
+                }, 100);        
                 img.classList.remove('z-index');
                 img.classList.add('becoming-inactive');
-            }, 400);           
+            }, 0);           
             setTimeout(function() {
                 img.classList.remove('becoming-inactive');
                 img.classList.add('inactive');
-            }, 1200);
+            }, 800);
         } 
         this.active = false;
     }
@@ -99,4 +99,10 @@ function backwardSwipe() {
         });
     }    
 }
+
+function beginSlides() {
+    slide1.makeActive();
+}
+
+beginSlides();
 

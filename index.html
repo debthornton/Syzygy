@@ -7,8 +7,9 @@
     <title>Syzygy</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://res.cloudinary.com/debdev/image/upload/v1547929315/Syzygy/favicon.ico">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-1-min.webp" as="image">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-1-min.webp
+    " as="image">
     <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-2-min.webp" as="image">
     <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-3-min.webp" as="image">
     <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-4-min.webp" as="image">
@@ -30,6 +31,11 @@
 <body id="body">
     <iframe id="sc-widget" width="200px" height="20px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/699697&color=%23508585&auto_play=false&hide_related=false&buying=false&show_artwork=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true"></iframe>
     
+    <div id="loading-page">
+        <span class='loading-span'>SYZYGY</span>
+        <div></div>
+    </div>
+
     <div class="heading">
         <div class="title">Syzygy</div>
         <div id="song-name"></div>
@@ -82,84 +88,68 @@
     </footer>
 
     <div id='slide-image-container' style='transform: translate(0px, 0px, 0px);'>
-        <div class="slide active" id='slide-1' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-1-min.webp); min-width: 100%;'>
+        <div class="slide inactive" id='slide-1' style='height: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-2' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-2-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-3' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-3-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-4' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-4-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-5' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-5-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-6' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-6-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-7' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-7-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-8' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-8-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-9' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928514/Syzygy/webp/background-img-9-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-10' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-10-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-11' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928512/Syzygy/webp/background-img-11-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-12' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928514/Syzygy/webp/background-img-12-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-13' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928514/Syzygy/webp/background-img-13-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-14' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928514/Syzygy/webp/background-img-14-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-15' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928513/Syzygy/webp/background-img-15-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
         <div class="slide inactive" id='slide-16' style='height: 100%;'>
-            <div class='slide-image'
-                style='background-image: url(https://res.cloudinary.com/debdev/image/upload/v1558928513/Syzygy/webp/background-img-16-min.webp); min-width: 100%;'>
+            <div class='slide-image'>
             </div>
         </div>
     </div>
@@ -168,8 +158,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/dwyl/range-touch/master/range-touch.min.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/dwyl/range-touch/master/demo/display-range-value.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/slides.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/slides.min.js"></script>
+    <script src="js/modernizr-custom.js"></script> 
 </body>
 
 </html>
