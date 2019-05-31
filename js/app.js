@@ -149,14 +149,6 @@ var view = {
                 todoTextWithCompletion = todo.todoText;
             }
 
-            // function store() {
-            //     // window.localStorage.setItem('list', todoList.todos);
-            //     todoList.todos.forEach(function(todo) {
-            //         window.localStorage.setItem('list', todo.todoText);
-            //     });
-            //     console.log(window.localStorage.list);
-            // }
-
             todoLi.id = position;
 
             todoInput.value = todoTextWithCompletion;
@@ -168,7 +160,6 @@ var view = {
             todoLi.appendChild(todoDiv);
             todosUl.appendChild(todoLi);
             todosUl.scrollTop = todosUl.scrollHeight;
-            // store();
         }, this)
     },
     createDeleteButton: function () {
@@ -228,6 +219,10 @@ view.setUpEventListeners();
     widget.bind(SC.Widget.Events.READY, function () {
         widget.bind(SC.Widget.Events.PLAY, function () {
 
+        });
+        
+        widget.bind(SC.Widget.Events.FINISH, function () {
+            forwardSwipe();
         });
         // get current level of volume
         widget.getVolume(function (volume) {

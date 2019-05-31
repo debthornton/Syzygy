@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="css/favicons/safari-pinned-tab.svg" color="#2f2a2a">
     <meta name="msapplication-TileColor" content="#2f2a2a">
     <meta name="theme-color" content="#2f2a2a">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="https://res.cloudinary.com/debdev/image/upload/v1558928511/Syzygy/webp/background-img-1-min.webp
     " as="image">
@@ -74,9 +74,12 @@
         <div></div>
     </div>
 
-    <div class="heading">
+    <div id="heading">
         <div class="title">Syzygy</div>
         <div id="song-name"></div>
+        <button id='fullscreen-button'>
+            <i id='fullscreen-icon' class="fa fa-expand"></i>
+        </button>
     </div>
     <div class="main">
         <div id="audio-controls">
@@ -106,8 +109,6 @@
                     </label>
                 </form>
             </div>
-
-            
         </div>
     </div>
     <div id="todo-list">
@@ -198,6 +199,7 @@
     <script type="text/javascript" src="https://cdn.rawgit.com/dwyl/range-touch/master/demo/display-range-value.js"></script>
     <script src="js/app.min.js"></script>
     <script src="js/slides.min.js"></script>
+    <script src="js/fullscreen.min.js"></script>
     <script src="js/modernizr-custom.js"></script> 
 </body>
 
